@@ -1,0 +1,436 @@
+.Navtab {
+  background-color: rgb(16, 93, 224);
+  display: flex;
+
+  
+
+
+  top: 0;
+
+
+  height: 40px;
+}
+.Nav-links {
+  display: flex;
+  justify-content: end;
+ 
+  
+  align-items: center;
+  width: 100%;
+  
+
+}
+.Nav-links a{
+  display: flex;
+  color:white;
+  margin: 16px;
+
+}
+
+.togglebutton {
+  display: none; /* Initially hide the button */
+}
+
+.logo {
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  padding-left: 20px;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .Nav-links {
+    display: none; /* Hide links by default on small screens */
+  }
+
+  .open {
+    display: flex; /* Show links when open */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position the links absolutely */
+    top: 40px; /* Adjust top position to avoid overlapping with header */
+    background-color: rgb(16, 93, 224);; /* Match background color of Navtab */
+    width: 100%; /* Full width */
+    padding: 10px 0; /* Add padding */
+  }
+
+  .Nav-links.open a:hover {
+    background-color: rgba(0, 0, 0, 0.244);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .toggle{
+    display: flex; /* Show button when nav links are open */
+
+   width: 100%;
+   justify-content: end;
+   align-items: center;
+  }
+  .togglebutton {
+    display: flex; /* Show button when nav links are open */
+    color: black;
+    justify-content: flex-end; /* Align button to the right */
+    background: none; /* Optional: Remove button background */
+    border: none; /* Optional: Remove button border */
+    cursor: pointer; /* Add pointer cursor for usability */
+    padding: 10px; /* Add padding for better touch target */
+    z-index: 2; /* Ensure it's above Nav-links */
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: rgb(16, 93, 224);
+  width: 100%;
+  height: 100px;
+  /* Fixed positioning to keep footer at the bottom */
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*  Hero section */
+.Hero {
+  display: flex;
+  position: relative; /* Ensure relative positioning for children */
+  width: 100%;
+}
+
+.Hero img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+.Hero H1{
+  position: absolute;
+  display: flex;
+color:white;
+font-weight: bold;
+font-size: 30px;
+left: 4px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+bottom: 20px;
+}
+.Hero H2{
+  position: absolute;
+  display: flex;
+color:white;
+font-weight: bold;
+font-size: 15px;
+left: 6px;
+bottom: 1px;
+
+}
+@media screen and (max-width:550px) {
+  .Hero H1{
+    font-size: 20px;
+  }
+  .Hero H2{
+    font-size: 10px;
+  }
+}
+
+
+/* Container for cards */
+.card-container {
+  display: flex;
+  position: relative;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 240px;
+  height: 370px;
+  margin: 10px;
+
+ 
+  justify-content: space-evenly;
+
+padding: 0px;
+
+
+
+
+  position: relative; /* Changed to relative for better positioning */
+}
+.card img{
+  display: flex;
+  border-color: black;
+  border-radius: 10px;
+  border: 1px solid ;
+  
+}
+.card a{
+  display: flex;
+  font-size: 20px;
+  color:white;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgb(16, 93, 224);;
+  padding: 4px;
+  width: ;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+  
+}
+
+.box{
+
+  display: flex;
+  justify-content: space-evenly;
+}
+.box button{
+  background-color: transparent;
+  border: none;
+  margin-left: 40px;
+}
+.box a {
+  border: 1px solid black;
+  border-radius: 3px;
+  
+  padding: 10px;
+  margin: 5px;
+}
+
+
+/* styles.css */
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  
+
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.people-also-ask {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.question-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.question {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.question:hover {
+  background-color: #e9e9e9;
+}
+
+.answer {
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #555;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 10px;
+}
+/*quiz*/
+.Hidestarter{
+  display: flex;
+}
+.starter{
+  display: none;
+}
+
+
+/* ALL.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-component {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.question-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.question {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.options {
+  margin: 10px 0;
+}
+
+.option {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #d0d0d0;
+}
+
+.correct {
+  background-color: #a5d6a7;
+}
+
+.incorrect {
+  background-color: #ef9a9a;
+}
+
+.correct-not-selected {
+  background-color: #c8e6c9;
+}
+
+.show-results-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.show-results-button:hover {
+  background-color: #0056b3;
+}
+
+.hideStarter {
+  display: none;
+}
+
+.starter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+
+.int{
+  background-color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+
+}
+.green{
+  background-color: green;
+  height: 30px;
+  width: 170px;
+  font-size: 15px;
+  display: flex;
+  margin: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.nogreen{
+  background-color: red;
+  height: 30px;
+  width: 170px;
+  font-size: 15px;
+  display: flex;
+  margin: 10px;
+  color:white;
+  border: none;
+  cursor: pointer;
+}
+.rahul{
+  display: none;
+}
+.dara{
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  color:green;
+}
+.d1{
+  display: none;
+}
+.normalbutton{
+  height: 30px;
+  width: 170px;
+  font-size: 15px;
+  display: flex;
+  margin: 10px;
+  cursor: pointer;
+}
+.nextbtn{
+  height: 30px;
+  width: 170px;
+  font-size: 15px;
+  display: flex;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  color:white;
+  justify-content: center;
+ align-items: center;
+  border-radius: 10px;
+  background-color: #007bff;
+}
